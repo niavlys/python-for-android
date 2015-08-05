@@ -399,6 +399,8 @@ function run_prepare() {
 	# create initial files
 	echo "target=android-$ANDROIDAPI" > $SRC_PATH/default.properties
 	echo "sdk.dir=$ANDROIDSDK" > $SRC_PATH/local.properties
+	echo "java.source=7" >> $SRC_PATH/local.properties
+	echo "java.target=7" >> $SRC_PATH/local.properties
 
 	# copy the initial blacklist in build
 	try cp -a $SRC_PATH/blacklist.txt $BUILD_PATH
